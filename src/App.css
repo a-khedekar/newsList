@@ -15,23 +15,22 @@
 }
 
 .imageCss {
-  width: 300px;
+  width: 100%;
   margin-bottom: 10px;
 }
 
-.CentralizationNews{
-   position: fixed;
-    top: 10%;
-    left: 40%;
-    width: 350px;
-    height: 200px;
+.CentralizationNews{   
+  top: 10%;
+  width: 500px;
+  height: 200px;
+  margin: auto;
 }
 
 
 .newsContainer {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .newsText {
@@ -76,4 +75,23 @@ body{
 
 .error{
   color: red;
+}
+
+.page-item {
+  display: inline-flex;
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.page-item:hover {
+  color:blue;
+  background-color: #8c9fb4;
+}
+
+.pagination {
+  padding: 20px;
 }
