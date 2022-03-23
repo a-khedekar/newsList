@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.searchContainer{
+    padding-bottom: 21px;
+    width: 310px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Centralization{
+  position:fixed;
+    top: 50%;
+    left: 50%;
+    width:310px;
+    height:200px;
+    margin-top: -9rem; /*set to a negative number 1/2 of your height*/
+    margin-left: -11rem; /*set to a negative number 1/2 of your width*/
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imageCss {
+  width: 300px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CentralizationNews{
+   position: fixed;
+    top: 10%;
+    left: 40%;
+    width: 350px;
+    height: 200px;
+}
+
+
+.newsContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.newsText {
+  /* display: flex;
+  flex-direction: row; */
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchButton{
+width: 23%;
+/* width: 40px; */
+  height: 36px;
+  border: 1px solid #8c9fb4;
+  background: #8c9fb4;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+
+.searchInput{
+  width: 72%;
+  /* width: 100%; */
+  border: 3px solid #8c9fb4;;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #8c9fb4;
+}
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+  --border-radius: 10px;
+}
+
+.error{
+  color: red;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom";
 import ReactPaginate from 'react-paginate';
+import '../App.css'
 
 function ResultPage() {
     let history = useHistory();
@@ -22,18 +23,22 @@ function ResultPage() {
 
     console.log("response", response)
     return (
-        <div>This is result page
+        <div className="CentralizationNews">
+            <h2 style={{ color: "#000" }}>Search Results</h2>
             {response.results.length > 0 && response.results.map((item) => {
                 console.log("item", item);
                 return (
-                    <div key={item.id}>
-                        <img src={`${item.fields.thumbnail}`} />
+                    <div className="newsContainer" key={item.id}>
                         <h3>{item.fields.headline}</h3>
-                        {item.tags.map((tag) => <span style={{ color: "#000" }} key={tag.id}>{tag.webTitle}</span>)}
+                        <img className="imageCss" src={`${item.fields.thumbnail}`} />
+                        <div className="newsText">
+
+                            {item.tags.map((tag) => <span style={{ color: "#000", fontSize: "12px", fontWeight: "bold", paddingRight: "5px" }} key={tag.id}><a href={tag.webUrl}>{tag.webTitle}</a></span>)}
+                        </div>
                     </div>
                 )
             })}
-            <span
+            {/* <span
             // onClick={(e) => getNews((Number(response.currentPage) < 0 ? 0 : Number(response.currentPage)) - 10)}
             >
                 Prev
@@ -48,7 +53,7 @@ function ResultPage() {
             // onClick={(e) => getNews(Number(response.currentPage) + 10)}
             >
                 Next
-            </span>
+            </span> */}
         </div>
     )
 }
